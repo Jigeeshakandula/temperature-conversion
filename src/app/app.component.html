@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row p-5">
+    <div class="col-3">
+      <label> Degrees </label><br>
+      <input type="text" class="form-contorl" [(ngModel)]="inputValue" >
+    </div>
+    <div class="col-3">
+      <label> Type </label><br>
+      <select  id="type" (input)="onSelect($event)">
+        <option value="Fahrenheit">Fahrenheit</option>
+        <option value="Celcius">Celcius</option>
+      </select>
+      
+    </div>
+    <div class="col-3">
+      <button class="btn btn-primary p-3 button" [disabled]="inputValue===''" (click)="onClick()">
+        Convert
+      </button>
+    </div>
+    <div class="col-12 mt-3">
+      <label> Result </label><br>
+      <input type="text" [(ngModel)]="result">
+    </div>
+  </div>
+
+</div>
